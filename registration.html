@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration - Osmania University</title>
+    <style>
+        body { font-family: 'Segoe UI', Arial, sans-serif; margin: 0; padding: 0; background-color: #f4f4f4; display: flex; justify-content: center; align-items: center; height: 100vh; }
+        
+        .registration-card { 
+            background: white; 
+            padding: 40px; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1); 
+            width: 400px; 
+            text-align: center;
+        }
+
+        .registration-card h2 { color: #004a99; margin-bottom: 25px; font-size: 24px; }
+        
+        .input-group { margin-bottom: 15px; text-align: left; }
+        .input-group input { 
+            width: 100%; 
+            padding: 12px; 
+            border: 1px solid #ddd; 
+            border-radius: 6px; 
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+
+        .register-btn { 
+            width: 100%; 
+            padding: 14px; 
+            background-color: #007bff; 
+            color: white; 
+            border: none; 
+            border-radius: 6px; 
+            font-size: 16px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            transition: 0.3s;
+            margin-top: 10px;
+        }
+        .register-btn:hover { background-color: #0056b3; }
+        
+        .back-link { display: block; margin-top: 15px; color: #666; text-decoration: none; font-size: 13px; }
+    </style>
+</head>
+<body>
+
+<div class="registration-card">
+    <h2>Student Registration</h2>
+    
+    <form action="register_process.jsp" method="POST">
+        <div class="input-group">
+            <input type="text" name="s_name" placeholder="Full Name" required>
+        </div>
+        
+        <div class="input-group">
+            <input type="text" name="h_no" placeholder="Hall Ticket Number" required>
+        </div>
+        
+        <div class="input-group">
+            <input type="email" name="s_email" placeholder="Email Address" required>
+        </div>
+        
+
+        <div class="input-group">
+            <input type="text" name="course_name" placeholder="Course Name (e.g. B.Tech CSE)" required>
+        </div>
+
+        <button type="submit" class="register-btn">Register Now</button>
+    </form>
+    
+    <a href="index.html" class="back-link">Back to Home</a>
+</div>
+
+</body>
+</html>

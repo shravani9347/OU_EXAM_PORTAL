@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Osmania University - Examination Management System</title>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f0f2f5; }
+        .header-top { background: white; padding: 10px 10px%; display: flex; align-items: center; border-bottom: 1px solid #ddd; }
+        .header-top img { height: 60px; margin-right: 20px; }
+        .header-top .title-text h1 { color: #004a99; margin: 0; font-size: 24px; }
+        .header-top .title-text p { margin: 0; font-size: 12px; color: #555; font-weight: bold; }
+        .navbar { background: #0056b3; padding: 0 10px%; display: flex; justify-content: center; }
+        .navbar a { color: white; padding: 15px 20px; text-decoration: none; font-size: 14px; font-weight: bold; }
+        .navbar a.active { background: #ffc107; color: black; }
+        .hero-section { height: 60vh; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('campus.jpg'); background-size: cover; background-position: center; display: flex; flex-direction: column; justify-content: center; align-items: center; color: white; position: relative; }
+        .hero-section h2 { font-size: 32px; margin-bottom: 30px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+        .login-card { background: white; padding: 30px; border-radius: 8px; box-shadow: 0 10px 25px rgba(0,0,0,0.3); width: 350px; text-align: center; color: #333; }
+        .login-card h3 { color: #0056b3; margin-top: 0; }
+        .login-card p { font-size: 12px; color: #777; }
+        .input-group { margin: 20px 0; }
+        input[type="text"] { width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 4px; box-sizing: border-box; font-size: 14px; text-align: center; }
+        .btn-login { background: #4caf50; color: white; padding: 12px; width: 100%; border: none; border-radius: 4px; font-weight: bold; cursor: pointer; font-size: 16px; }
+        .btn-login:hover { background: #45a049; }
+        .footer { background: white; text-align: center; padding: 20px; font-size: 12px; color: #777; border-top: 1px solid #ddd; }
+    </style>
+</head>
+<body>
+    <div class="header-top">
+        <img src="logo.png" alt="OU Logo">
+        <div class="title-text">
+            <h1>Osmania University</h1>
+            <p>ACCREDITED BY NAAC WITH 'A+' GRADE</p>
+        </div>
+    </div>
+    <div class="navbar">
+        <a href="#">Home</a>
+        <a href="#">About Us</a>
+        <a href="#">Online Examination</a>
+        <a href="registration.html">Registration</a>
+        <a href="#">Contact Us</a>
+    </div>
+    <div class="hero-section">
+        <h2>Examination Management System</h2>
+        <div class="login-card">
+            <h3>Student Login</h3>
+            <p>Enter Hall Ticket Number to verify details</p>
+            <form action="login_check.jsp" method="get">
+                <div class="input-group">
+                    <input type="text" name="hallticket" placeholder="Hall Ticket Number" required>
+                </div>
+                <button type="submit" class="btn-login">Login to Examination System</button>
+            </form>
+        </div>
+    </div>
+    <div class="footer">
+        © 2026 Osmania University. All rights reserved.<br>
+        Hyderabad, Telangana, India.
+    </div>
+    <script>
+        document.oncontextmenu = (e) => e.preventDefault();
+    </script>
+</body>
+</html>
