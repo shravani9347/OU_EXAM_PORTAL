@@ -8,7 +8,7 @@
     String course = request.getParameter("course_name");
 
     // Line 11 & 12 ni ila marchu (Quotes lona mee real values veyyali)
-String dburl = "jdbc:mysql://mysql.railway.internal:3307/railway";
+String dburl = "jdbc:mysql://mysql.railway.internal:3306/railway";
 String dbuser = "root";
 String dbPass = "yaBcaJJgtVIrSlGOWsgRZCKXMyQHyaRa";
 
