@@ -1,49 +1,46 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 <%
+    // 405 Error rakunda undalante e block add cheyyali
     if ("GET".equalsIgnoreCase(request.getMethod())) {
         response.sendRedirect("registration.html"); 
         return;
     }
-%>
-<%
-    // Form nundi data collect cheyadam
+
     String name = request.getParameter("s_name");
     String hno = request.getParameter("h_no");
     String email = request.getParameter("s_email");
     String course = request.getParameter("course_name");
 
-    // Line 11 & 12 ni ila marchu (Quotes lona mee real values veyyali)
-String dburl = "jdbc:mysql://mysql://nozomi.proxy.rlwy.net:48731/railway:3306/railway";
-String dbuser = "root";
-String dbPass = "yaBcaJJgtVIrSlGOWsgRZCKXMyQHyaRa";
+    // Railway Variables (Screenshot 9deb5158 nundi)
+    String dburl = "jdbc:mysql://ozoni.proxy.rlwy.net:48731/railway";
+    String dbuser = "root";
+    String dbPass = "yaBcaJ3gtV1rS1G0MsgRZCXXXyQhyaRa";
 
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
-        Connection con = DriverManager.getConnection(dbUrl, dbUser, dbPass);
-        
-        // Data insert cheyadaniki Query
-        String query = "INSERT INTO student_info (s_name, h_no, s_email, course_name) VALUES (?, ?, ?, ?)";
+        Connection con = DriverManager.getConnection(dburl, dbuser, dbPass);
+
+        String query = "INSERT INTO student_info (name, hall_ticket, password) VALUES (?, ?, ?)";
         PreparedStatement ps = con.prepareStatement(query);
         ps.setString(1, name);
         ps.setString(2, hno);
-        ps.setString(3, email);
-        ps.setString(4, course);
-        
+        ps.setString(3, "123"); // Default password or use another parameter
+
         int status = ps.executeUpdate();
-        
+
         if(status > 0) {
 %>
             <script>
-                alert("Registration Successful! You can now login with your Hall Ticket.");
+                alert("Registration Successful! Now login with Hall Ticket.");
                 window.location.href='index.html';
             </script>
 <%
         } else {
-            out.println("Registration Failed. Please try again.");
+            out.println("Registration Failed. Try again.");
         }
         con.close();
-    } catch (Exception e) {
-        out.println("Database Error: " + e.getMessage());
+    } catch(Exception e) {
+        out.println("Error: " + e.getMessage());
     }
 %>
