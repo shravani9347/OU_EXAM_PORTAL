@@ -1,6 +1,12 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 <%
+    if ("GET".equalsIgnoreCase(request.getMethod())) {
+        response.sendRedirect("registration.html"); 
+        return;
+    }
+%>
+<%
     // Form nundi data collect cheyadam
     String name = request.getParameter("s_name");
     String hno = request.getParameter("h_no");
