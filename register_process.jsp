@@ -7,10 +7,10 @@
     String email = request.getParameter("s_email");
     String course = request.getParameter("course_name");
 
-    // Database connection details
-    String dbUrl = "jdbc:mysql://localhost:3307/ou_exam_portal";
-    String dbUser = "root";
-    String dbPass = "";
+    // Line 11 & 12 ni ila marchu (Quotes lona mee real values veyyali)
+String dburl = "jdbc:mysql://mysql.railway.internal:3306/railway";
+String dbuser = "root";
+String dbPass = "yaBcaJJgtVIrSlGOWsgRZCKXMyQHyaRa";
 
     try {
         Class.forName("com.mysql.cj.jdbc.Driver");
