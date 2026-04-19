@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ page import="java.sql.*" %>
 <%
+//405 error fix
+if("GET".equalsIgnoreCase(request.getMethod())){
+response.sendRedirect("index.html");
+return;
+}
     // Form nundi details collect chesthunnam
     String name = request.getParameter("s_name");
     String hno = request.getParameter("h_no");
