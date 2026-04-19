@@ -9,7 +9,7 @@
 
     // LOCALHOST SETTINGS (XAMPP)
     // Meeru 3307 annaru kabatti adhe peduthunna
-    String dburl = "jdbc:mysql://nozomi.proxy.rlwy.net:48731/3306/railway"; 
+    String dburl = "jdbc:mysql://nozomi.proxy.rlwy.net:48731/railway"; 
     String dbuser = "root";
     String dbPass = "yaBcaJJgtVIrSlGOWsgRZCKXMyQHyaRa"; 
 
